@@ -266,20 +266,6 @@ node --max-old-space-size=4096 ./node_modules/.bin/vivliostyle build
 - [Vivliostyle Themes](https://vivliostyle.github.io/themes/)
 - [CSS Paged Media](https://www.w3.org/TR/css-page-3/)
 
-### 🔖 プロジェクト内ガイド
-このテンプレートには`vivliostyle_user_guide/`ディレクトリに詳細なガイドが含まれています：
-
-- **getting-started.md**: 基本的な使い方と設定方法
-- **config.md**: vivliostyle.config.js の詳細設定オプション
-- **themes-and-css.md**: テーマとカスタムスタイルの作成方法
-- **cover-page.md**: 表紙ページの設定とカスタマイズ
-- **toc-page.md**: 目次ページの設定方法
-- **special-output-settings.md**: PDF、EPUB、WebPub固有の設定
-- **ja/**: 上記ドキュメントの日本語版
-
-### 🤖 Claude Code使用時の注意
-Claude Codeで電子書籍作成を行う場合は、まず`vivliostyle_user_guide/`の関連ドキュメントを確認して最新情報にキャッチアップすることを推奨します。
-
 
 ## 🤝 コントリビューション
 
