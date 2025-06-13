@@ -1,0 +1,255 @@
+/* カスタムCSS - 書籍のスタイリング */
+
+/* 基本設定 */
+:root {
+  --main-color: #2c3e50;
+  --accent-color: #3498db;
+  --text-color: #333;
+  --bg-color: #fff;
+  --border-color: #ddd;
+}
+
+/* ページ設定 */
+@page {
+  size: A5;
+  margin: 20mm 15mm;
+  
+  /* ヘッダー */
+  @top-center {
+    content: string(doctitle);
+    font-size: 10pt;
+    color: #666;
+  }
+  
+  /* フッター */
+  @bottom-center {
+    content: counter(page);
+    font-size: 10pt;
+    color: #666;
+  }
+}
+
+/* 章の開始ページ */
+@page :first {
+  @top-center {
+    content: none;
+  }
+}
+
+/* 基本フォント設定 */
+body {
+  font-family: "Noto Serif CJK JP", "Yu Mincho", "YuMincho", "Hiragino Mincho Pro", serif;
+  font-size: 10pt;
+  line-height: 1.8;
+  color: var(--text-color);
+  letter-spacing: 0.05em;
+}
+
+/* 見出しスタイル */
+h1 {
+  color: var(--main-color);
+  font-size: 18pt;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20pt;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 10pt;
+  page-break-before: always;
+  string-set: doctitle content();
+}
+
+h2 {
+  color: var(--main-color);
+  font-size: 14pt;
+  font-weight: bold;
+  margin-top: 20pt;
+  margin-bottom: 12pt;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 10pt;
+}
+
+h3 {
+  color: var(--main-color);
+  font-size: 12pt;
+  font-weight: bold;
+  margin-top: 16pt;
+  margin-bottom: 8pt;
+}
+
+h4, h5, h6 {
+  color: var(--main-color);
+  font-size: 10pt;
+  font-weight: bold;
+  margin-top: 12pt;
+  margin-bottom: 6pt;
+}
+
+/* 段落設定 */
+p {
+  margin-bottom: 8pt;
+  text-align: justify;
+  text-indent: 1em;
+}
+
+/* リスト設定 */
+ul, ol {
+  margin-bottom: 12pt;
+  padding-left: 20pt;
+}
+
+li {
+  margin-bottom: 4pt;
+}
+
+/* コードブロック */
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10pt;
+  margin: 12pt 0;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 9pt;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 9pt;
+  background-color: #f8f8f8;
+  padding: 2pt 4pt;
+  border-radius: 2px;
+}
+
+/* 引用 */
+blockquote {
+  margin: 12pt 0;
+  padding: 8pt 12pt;
+  border-left: 4px solid var(--accent-color);
+  background-color: #f9f9f9;
+  font-style: italic;
+}
+
+/* 表 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12pt 0;
+  font-size: 9pt;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 6pt 8pt;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* キャプション */
+figcaption {
+  font-size: 9pt;
+  color: #666;
+  text-align: center;
+  margin-top: 6pt;
+  font-style: italic;
+}
+
+/* 画像 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12pt auto;
+}
+
+/* 数式 */
+.math {
+  text-align: center;
+  margin: 12pt 0;
+}
+
+/* 改ページ制御 */
+.page-break {
+  page-break-before: always;
+}
+
+.avoid-break {
+  page-break-inside: avoid;
+}
+
+/* 強調 */
+strong, b {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* 注釈 */
+.footnote {
+  font-size: 8pt;
+  color: #666;
+}
+
+/* 目次用スタイル */
+.toc {
+  page-break-before: always;
+}
+
+.toc-title {
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20pt;
+  color: var(--main-color);
+}
+
+.toc-entry {
+  margin-bottom: 6pt;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toc-entry a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.toc-entry a:hover {
+  color: var(--accent-color);
+}
+
+/* 表紙用スタイル */
+.cover {
+  text-align: center;
+  page-break-after: always;
+}
+
+.cover-title {
+  font-size: 24pt;
+  font-weight: bold;
+  margin-top: 40mm;
+  margin-bottom: 20mm;
+  color: var(--main-color);
+}
+
+.cover-author {
+  font-size: 14pt;
+  margin-bottom: 40mm;
+  color: var(--text-color);
+}
+
+/* 印刷調整 */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

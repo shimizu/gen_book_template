@@ -1,0 +1,41 @@
+{
+  "name": "vivliostyle-book-template",
+  "version": "1.0.0",
+  "description": "Vivliostyle CLIを使った電子書籍作成テンプレート",
+  "main": "vivliostyle.config.js",
+  "scripts": {
+    "init": "vivliostyle init",
+    "preview": "vivliostyle preview",
+    "build": "vivliostyle build",
+    "build:pdf": "vivliostyle build -o output/book.pdf",
+    "build:epub": "vivliostyle build -o output/book.epub",
+    "build:webpub": "vivliostyle build -o output/book-webpub",
+    "build:all": "npm run build:pdf && npm run build:epub && npm run build:webpub",
+    "clean": "rm -rf output/* .vivliostyle/"
+  },
+  "keywords": [
+    "vivliostyle",
+    "epub",
+    "pdf",
+    "book",
+    "template",
+    "markdown"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@vivliostyle/cli": "^9.2.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/vivliostyle-book-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/vivliostyle-book-template/issues"
+  },
+  "homepage": "https://github.com/yourusername/vivliostyle-book-template#readme"
+}
