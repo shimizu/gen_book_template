@@ -28,7 +28,17 @@
 │   ├── book.pdf                # PDF出力
 │   ├── book.epub               # EPUB出力
 │   └── book-webpub/            # WebPub出力
-└── themes/                      # テーマファイル
+└── vivliostyle_user_guide/      # Vivliostyle使用ガイド
+    ├── README.md               # ガイド概要
+    ├── getting-started.md      # 入門ガイド
+    ├── config.md               # 設定ファイル説明
+    ├── themes-and-css.md       # テーマとスタイル
+    ├── toc-page.md            # 目次ページ設定
+    ├── cover-page.md          # 表紙ページ設定
+    ├── special-output-settings.md # 特殊出力設定
+    ├── frontend-framework-support.md # フレームワーク対応
+    ├── api-javascript.md      # JavaScript API
+    └── ja/                    # 日本語版ドキュメント
 ```
 
 ## 主要コマンド
@@ -122,9 +132,37 @@ npm run build -- --verbose
 - 大きな画像ファイルは出力サイズに影響
 - 数式の複雑さによってはビルド時間が延長
 
+## 参考資料
+### vivliostyle_user_guide/
+プロジェクトに含まれるVivliostyleの使用ガイドドキュメント集です：
+
+- **getting-started.md**: Vivliostyle CLIの基本的な使い方
+- **config.md**: vivliostyle.config.jsの詳細設定オプション
+- **themes-and-css.md**: テーマの選択とカスタムCSS作成方法
+- **toc-page.md**: 目次ページの設定とカスタマイズ
+- **cover-page.md**: 表紙ページの作成と設定
+- **special-output-settings.md**: PDF、EPUB、WebPub固有の出力設定
+- **frontend-framework-support.md**: React、Vue等のフレームワーク対応
+- **api-javascript.md**: JavaScript APIの使用方法
+- **ja/**: 上記ドキュメントの日本語版
+
+これらのガイドは、より高度なカスタマイズや特殊な要件に対応する際の参考資料として活用できます。
+
+### 🤖 Claude Code作業時の重要な指示
+**電子書籍作成を開始する前に必須の作業：**
+1. `vivliostyle_user_guide/`ディレクトリ内の関連ドキュメントを読んで最新情報にキャッチアップ
+2. 特に以下のファイルを優先的に確認：
+   - `getting-started.md` または `ja/getting-started.md`
+   - `config.md` または `ja/config.md`
+   - 作業内容に応じた関連ドキュメント
+3. 最新のベストプラクティスと設定オプションを理解してから作業開始
+
+この手順により、常に最新の機能と推奨方法に基づいた電子書籍作成が可能になります。
+
 ## 開発履歴
 - 初期テンプレート作成
 - @vivliostyle/theme-techbook導入
 - カスタムCSS整備
 - 日本語コンテンツ作成
 - 3形式出力対応完了
+- Vivliostyle使用ガイド追加

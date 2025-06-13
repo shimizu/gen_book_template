@@ -1,6 +1,26 @@
 # Vivliostyle CLI 電子書籍作成テンプレート
 
-このリポジトリは、[Vivliostyle CLI](https://docs.vivliostyle.org/#/vivliostyle-cli)を使用して電子書籍を作成するためのテンプレートです。Markdownで書いた原稿から、PDF、EPUB、WebPublicationの各形式で書籍を出力できます。
+このリポジトリは、**Claude Code**と[Vivliostyle CLI](https://docs.vivliostyle.org/#/vivliostyle-cli)を組み合わせて電子書籍を効率的に作成するためのテンプレートです。
+
+## 🤖 Claude Codeとの連携
+
+**Claude Code**（Anthropic社のAIアシスタント）を使用することで、以下の作業を自動化・効率化できます：
+
+- 📝 Markdownコンテンツの自動生成と編集
+- ⚙️ 設定ファイル（vivliostyle.config.js）の最適化
+- 🎨 カスタムCSS作成とスタイル調整
+- 🔧 ビルドエラーの自動修正
+- 📊 章構成の提案と整理
+- 🖼️ 画像配置とレイアウトの最適化
+
+### AIアシスタントによる書籍制作の特徴
+
+- **自動化された品質管理**: コード品質、スタイル一貫性、構造整合性を自動チェック
+- **インテリジェントな提案**: 最適なテーマ選択、レイアウト改善、コンテンツ構成の提案
+- **効率的なトラブルシューティング**: ビルドエラーや設定問題の迅速な解決
+- **最新情報の活用**: Vivliostyle機能とベストプラクティスの自動適用
+
+Markdownで書いた原稿から、PDF、EPUB、WebPublicationの各形式で高品質な書籍を出力できます。
 
 ## 🚀 クイックスタート
 
@@ -225,14 +245,26 @@ node --max-old-space-size=4096 ./node_modules/.bin/vivliostyle build
 
 ## 📚 参考資料
 
+### 公式ドキュメント
 - [Vivliostyle CLI Documentation](https://docs.vivliostyle.org/#/vivliostyle-cli)
 - [VFM (Vivliostyle Flavored Markdown)](https://vivliostyle.github.io/vfm/)
 - [Vivliostyle Themes](https://vivliostyle.github.io/themes/)
 - [CSS Paged Media](https://www.w3.org/TR/css-page-3/)
 
-## 📄 ライセンス
+### 🔖 プロジェクト内ガイド
+このテンプレートには`vivliostyle_user_guide/`ディレクトリに詳細なガイドが含まれています：
 
-このテンプレートはMITライセンスの下で公開されています。自由に改変・再配布していただけます。
+- **getting-started.md**: 基本的な使い方と設定方法
+- **config.md**: vivliostyle.config.js の詳細設定オプション
+- **themes-and-css.md**: テーマとカスタムスタイルの作成方法
+- **cover-page.md**: 表紙ページの設定とカスタマイズ
+- **toc-page.md**: 目次ページの設定方法
+- **special-output-settings.md**: PDF、EPUB、WebPub固有の設定
+- **ja/**: 上記ドキュメントの日本語版
+
+### 🤖 Claude Code使用時の注意
+Claude Codeで電子書籍作成を行う場合は、まず`vivliostyle_user_guide/`の関連ドキュメントを確認して最新情報にキャッチアップすることを推奨します。
+
 
 ## 🤝 コントリビューション
 
